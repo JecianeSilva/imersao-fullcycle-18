@@ -42,7 +42,7 @@ POST http://localhost:3000/events/{{ eventId }}/spots
 Content-Type:  application/json
 
 {
-  "name": "A4"
+  "name": "A1"
 }
 
 ###
@@ -65,3 +65,13 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/events/{{ eventId }}/spots/{{spotId}}
+
+###
+POST http://localhost:3000/events/{{ eventId }}/reserve
+Content-Type:  application/json
+
+{
+  "spots": ["{{ spotName }}"],
+  "ticket_kind": "full",
+  "email": "teste@example.com"
+}
