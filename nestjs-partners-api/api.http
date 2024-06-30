@@ -33,3 +33,14 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/events/{{eventId}}
 
+### Spots
+GET http://localhost:3000/events/{{ eventId }}/spots
+
+###
+# @name createSpot
+POST http://localhost:3000/events/{{ eventId }}/spots
+Content-Type:  application/json
+
+{
+  "name": "A4"
+}
