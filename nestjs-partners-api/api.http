@@ -44,3 +44,24 @@ Content-Type:  application/json
 {
   "name": "A4"
 }
+
+###
+@spotId = {{ createSpot.response.body.id }}
+
+###
+@spotName = {{ createSpot.response.body.name }}
+
+
+###
+GET http://localhost:3000/events/{{ eventId }}/spots/{{spotId}}
+
+###
+PATCH http://localhost:3000/events/{{ eventId }}/spots/{{spotId}}
+Content-Type: application/json
+
+{
+  "name": "A1"
+}
+
+###
+DELETE http://localhost:3000/events/{{ eventId }}/spots/{{spotId}}
