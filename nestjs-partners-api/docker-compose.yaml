@@ -3,6 +3,7 @@ services:
     build: .
     ports:
       - 3000:3000
+      - 3001:3001
     volumes:
       - .:/home/node/app
 
@@ -13,4 +14,4 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./.docker/dbdata:/var/lib/mysql
+      - ./.docker/mysql:/docker-entrypoint-initdb.d
