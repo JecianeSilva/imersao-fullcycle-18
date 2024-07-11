@@ -42,7 +42,7 @@ POST http://localhost:3001/eventos/{{ eventId }}/lugares
 Content-Type:  application/json
 
 {
-  "name": "A5"
+  "name": "A11"
 }
 
 ###
@@ -69,6 +69,7 @@ DELETE http://localhost:3001/eventos/{{ eventId }}/lugares/{{spotId}}
 ###
 POST http://localhost:3001/eventos/{{ eventId }}/reservar
 Content-Type:  application/json
+X-Api-Token: 1234
 
 {
   "spots": ["{{ spotName }}"],

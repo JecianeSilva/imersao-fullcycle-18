@@ -7,7 +7,7 @@ import { SpotsModule } from './spots/spots.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ envFilePath: '.env.partner2' }),
+    ConfigModule.forRoot({ envFilePath: '.env.partner2', isGlobal: true }),
     PrismaModule,
     EventsModule,
     SpotsModule,
